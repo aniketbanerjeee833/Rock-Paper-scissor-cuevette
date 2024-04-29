@@ -207,6 +207,7 @@ filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));/* Ellipse 1 */
 box-shadow: inset 3px 0px 21px 1px rgba(0, 0, 0, 0.2);
 
 
+
    
 
 }
@@ -321,8 +322,15 @@ filter: drop-shadow(-1px 1px 11px rgba(0, 0, 0, 0.35));
       
 }
   
+  .shifted-paper-win, .shifted-paper-lost, .shifted-paper-draw,
+  .shifted-scisor-win, .shifted-scissor-lost, .shifted-scissor-draw
+  .shifted-rock-win, .shifted-rock-lost, .shifted-rock-draw
+  {
+    pointer-events: none;
+  }
   
 
+  
 .shifted-scissor-win::after, .shifted-rock-win::after, .shifted-paper-win::after
 {
     content: "";
