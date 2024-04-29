@@ -28,24 +28,20 @@ const container=document.querySelector(".container")
  ]
  
  const random = Math.floor(Math.random()*3);
- //console.log(random);
+
  const info= pics[random];
  
  const info1=Object.keys(info);
- //console.log(info1);
+
  const info2=Object.values(info);
 console.log(info2);
 
  const divElement=document.createElement("div");
- //divElement.classList.add("computer-picked");
- // divElement.classList.add("comp-container-default");
-   //divElement.innerHTML=`   ${info2}`
-   //<div class="comp_container"> </div>`
+
    
    container.append(divElement);
    
-// divElement.style.backgroundImage = info2;
- //divElement.style.opacity=0;
+
 
     let data=JSON.parse(localStorage.getItem("Rock-Paper-scissor-user"));
     console.log(data);
@@ -187,8 +183,6 @@ const show_Winner = (userWin) => {
 
 
 
-
-
 const generateCompChoice = () => 
 {
     const info= pics[random];
@@ -198,16 +192,13 @@ const generateCompChoice = () =>
     console.log(info1);
     console.log(info1.at(0));
     return (info1.at(0))
-   // const options = ["paper", "rock", "scissor"];
-//return options[random];
-
+  
 }
 
 
 const tieUpComp=()=>
 {
 
- 
 
     const divElement6=document.createElement("div");
     divElement6.classList.add("comp-draw");
@@ -349,10 +340,10 @@ const displayresult=(userWin)=>
 };
 const newPage=(event,userChoice) =>
 {
-        console.log(paperRock.id);
-        paperRock.style.opacity=0;
-        paperScissor.style.opacity=0;
-        rockScissor.style.opacity=0;
+        //console.log(paperRock.id);
+        //paperRock.style.opacity=0;
+        //paperScissor.style.opacity=0;
+        //rockScissor.style.opacity=0;
        
         console.log(userChoice);
         let current=event.target;
@@ -386,11 +377,14 @@ const newPage=(event,userChoice) =>
                 else if(current.id === "paper")
                 {
                    
+
                     let next=current.nextElementSibling;
                     console.log(next.id);
                     next.remove();
                     let nextOfnext=current.nextElementSibling;
                     nextOfnext.remove();
+                
+
                 }
 
     console.log("user=", userChoice);
@@ -444,7 +438,7 @@ const newPage=(event,userChoice) =>
             userWin=true;
             divElement.style.backgroundImage = info2;
             divElement.classList.add("comp-container-lost-rock");
-
+            
           compLost();
 
             choice1.classList.add("shifted-paper-win");
@@ -504,12 +498,10 @@ const newPage=(event,userChoice) =>
 
 choices.forEach((choice) => {
 
-                                            ////Running a loop 
-    //console.log(choice);
+    
+   
     choice.addEventListener("click", (event) => {
-        //console.log(event.target);
-
-        //newPage(event);
+   
         const userChoice = choice.getAttribute("id");
        //console.log(userChoice);
         //playGame(userChoice);
@@ -555,21 +547,24 @@ choices.forEach((choice) => {
   button.addEventListener("click",rules_open);
   //let close1=close.parentElement;
   //console.log(close1);
-  const next1=document.querySelector(".next1")
+  //const next1=document.querySelector(".next1")
 const UserWinner=()=>
 {
-    const divElement3=document.createElement("button");
+    const divElement3=document.createElement("a");
     divElement3.classList.add("next");
     divElement3.innerText=`NEXT`
-    divElement3.addEventListener("click",removeAll)
-  next1.append(divElement3);
+    divElement3.href="./winner.html"
+    //divElement3.addEventListener("click",removeAll)
+  //next1.append(divElement3);
+container.append(divElement3)
+
 }
   
 
 //const remove=document.querySelector(".remove");
 
 const main=document.querySelector(".main-section");
-const removeAll=(event)=>
+/*const removeAll=(event)=>
 {
     console.log(event.target);
     let section=event.target.parentElement;
@@ -597,6 +592,6 @@ const removeAll=(event)=>
 </div>`
     main.append(divElement4);
 
-}
+}*/
 
 //next.addEventListener("click",removeAll);
