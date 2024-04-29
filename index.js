@@ -564,34 +564,7 @@ container.append(divElement3)
 //const remove=document.querySelector(".remove");
 
 const main=document.querySelector(".main-section");
-/*const removeAll=(event)=>
-{
-    console.log(event.target);
-    let section=event.target.parentElement;
-    console.log(section);
-    let section1=section.parentElement;
-    console.log(section1);
-    section1.remove();
-    const divElement4=document.createElement("div");
-    divElement4.classList.add("image-div");
-    divElement4.innerHTML=
-    ` <div class="winning-div">
-    <img src="Vector.png" class="vector">
-    <img src="HURRAY!!.png" class="hurray">
-    <img src="YOU WON THE GAME.png" class="won">
-    <img src="Star 1.png" class="star1">
-    <img src="Star 2.png" class="star2">
-    <img src="Star 3.png" class="star3">
-    <img src="Star 4.png" class="star4">
-    <img src="Star 5.png" class="star5">
-    <img src="Star 6.png" class="star6">
-    <img src="Star 7.png" class="star7">
-    <img src="Star 9.png" class="star9">
-    <button class="btn1" onclick="Reload_Location()">PLAY AGAIN</button>
-  
-</div>`
-    main.append(divElement4);
 
-}*/
+  
 
 //next.addEventListener("click",removeAll);
